@@ -1,0 +1,60 @@
+:root {
+  --cor-texto: #ff0000;
+  --bg-relogio: #000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Orbitron", sans-serif;
+  color: var(--cor-texto);
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("./img/bgbege.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.relogio {
+  margin-top: -100px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  background-color: var(--bg-relogio);
+  width: 500px;
+  height: 120px;
+  padding: 0 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
+}
+
+.box_span {
+  /* background-color: white; */
+  width: 150px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+}
+
+.relogio span {
+  font-size: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  text-shadow: 0 0 5px var(--cor-texto);
+}
+
+.box_span:not(:last-child)::after {
+  content: ":";
+  margin-bottom: 0.8rem;
+  font-size: 70px;
+}
